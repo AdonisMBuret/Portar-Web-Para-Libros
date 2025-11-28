@@ -1,11 +1,28 @@
-<<<<<<< HEAD
+# Librería Online - Proyecto Final
 
-# PHP Starter
+**Programación Web**
 
-Quickly get started with [PHP](https://www.php.net/) using this starter! PHP is a popular general-purpose scripting language that is especially suited to web development.
+**Estudiante:** Adonis Mercedes  
+**Matrícula:** 2021-2396
 
-# This starter starts a PHP web server on [localhost:8080](http://localhost:8080).
+### Tecnologías utilizadas
 
-# Portar-Web-Para-Libros
+- HTML5, CSS3 y JavaScript
+- PHP 8+ con PDO
+- MySQL (base de datos "Librería")
+- Bootstrap 5 (CDN)
+- Estilos personalizados en tonos morado y negro
 
-> > > > > > > 40829b0a6f2a4c48573a6c27de4e7cf3495b4ca9
+### Estructura del proyecto
+
+- `index.php` → Listado de libros
+- `autores.php` → Listado de autores
+- `contacto.php` → Formulario de contacto
+- `procesar_contacto.php` → Inserta mensajes en la tabla `contacto`
+- `conexion.php` → Conexión PDO a la base de datos
+- `css/estilos.css` y `js/scripts.js` → Estilos y validación
+
+### Notas
+
+- La conexión a la base de datos funciona en el hosting remoto en Infinity Free.
+- En Codesandbox solo se revisa el código fuente (es normal que muestre errores de conexión).
