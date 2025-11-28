@@ -1,16 +1,118 @@
+/* estilos.css - Tema morado y negro con degradados */
+
+/* Colores base */
+:root {
+  --purple-dark: #4a148c; /* Morado oscuro */
+  --purple-medium: #6a1b9a; /* Morado medio */
+  --purple-light: #ab47bc; /* Morado claro */
+  --black-dark: #121212; /* Negro oscuro */
+  --black-medium: #1e1e1e; /* Negro medio */
+  --text-light: #ffffff; /* Texto claro para contraste */
+  --text-dark: #e0e0e0; /* Texto gris claro */
+}
+
+/* Fondo general con degradado */
 body {
-  background-color: #f8f9fa;
+  background: linear-gradient(to bottom, var(--black-dark), var(--purple-dark));
+  color: var(--text-dark);
   font-family: Arial, sans-serif;
+  min-height: 100vh; /* Asegura que el degradado cubra toda la página */
+  margin: 0;
+  padding: 0;
 }
 
+/* Contenedor principal */
 .container {
+  background: linear-gradient(
+    to right,
+    var(--black-medium),
+    var(--purple-medium)
+  );
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
   max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.table {
-  margin-top: 20px;
-}
-
+/* Navbar con degradado */
 .navbar {
-  margin-bottom: 20px;
+  background: linear-gradient(to right, var(--purple-dark), var(--black-dark));
+  border-bottom: 2px solid var(--purple-light);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--text-light) !important;
+}
+
+.nav-link:hover {
+  color: var(--purple-light) !important;
+}
+
+/* Tablas con estilo morado/negro */
+.table {
+  background-color: var(--black-medium);
+  color: var(--text-dark);
+  border: 1px solid var(--purple-medium);
+}
+
+.table thead th {
+  background: linear-gradient(
+    to bottom,
+    var(--purple-medium),
+    var(--purple-dark)
+  );
+  color: var(--text-light);
+  border-bottom: 2px solid var(--black-dark);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(106, 27, 154, 0.1); /* Morado transparente */
+}
+
+.table td,
+.table th {
+  border: 1px solid var(--purple-dark);
+}
+
+/* Formularios */
+.form-control {
+  background-color: var(--black-dark);
+  border: 1px solid var(--purple-medium);
+  color: var(--text-light);
+}
+
+.form-control:focus {
+  border-color: var(--purple-light);
+  box-shadow: 0 0 5px var(--purple-light);
+}
+
+.btn-primary {
+  background: linear-gradient(
+    to right,
+    var(--purple-medium),
+    var(--purple-dark)
+  );
+  border: none;
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(
+    to right,
+    var(--purple-light),
+    var(--purple-medium)
+  );
+}
+
+/* Alertas (para mensaje de éxito) */
+.alert-success {
+  background: linear-gradient(
+    to right,
+    var(--purple-dark),
+    var(--black-medium)
+  );
+  color: var(--text-light);
+  border: 1px solid var(--purple-light);
 }
