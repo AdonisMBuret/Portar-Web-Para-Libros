@@ -1,8 +1,8 @@
 {
-    "name": "libreria-online",
-    "description": "Proyecto Final - Librería Online",
-    "type": "project",
-    "require": {
-      "php": ">=7.4"
-    }
+  "name": "libreria-online",
+  "description": "Proyecto Final - Librería Online",
+  "type": "project",
+  "require": {
+    "php": ">=7.4"
   }
+}
