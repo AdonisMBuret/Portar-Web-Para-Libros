@@ -1,14 +1,11 @@
-/* estilos.css - Tema morado y negro con degradados */
-
-/* Colores base */
 :root {
-  --purple-dark: #4a148c; /* Morado oscuro */
-  --purple-medium: #6a1b9a; /* Morado medio */
-  --purple-light: #ab47bc; /* Morado claro */
-  --black-dark: #121212; /* Negro oscuro */
-  --black-medium: #1e1e1e; /* Negro medio */
-  --text-light: #ffffff; /* Texto claro para contraste */
-  --text-dark: #e0e0e0; /* Texto gris claro */
+  --purple-dark: #4a148c;
+  --purple-medium: #6a1b9a;
+  --purple-light: #ab47bc;
+  --black-dark: #121212;
+  --black-medium: #1e1e1e;
+  --text-light: #ffffff;
+  --text-dark: #e0e0e0;
 }
 
 /* Fondo general con degradado */
@@ -16,7 +13,7 @@ body {
   background: linear-gradient(to bottom, var(--black-dark), var(--purple-dark));
   color: var(--text-dark);
   font-family: Arial, sans-serif;
-  min-height: 100vh; /* Asegura que el degradado cubra toda la página */
+  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -68,7 +65,7 @@ body {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(106, 27, 154, 0.1); /* Morado transparente */
+  background-color: rgba(106, 27, 154, 0.1);
 }
 
 .table td,
