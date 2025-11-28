@@ -3,12 +3,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Listado de Libros - Librería Online</title>
+    <title>Listado de Autores - Librería Online</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Mismo navbar que en index.php -->
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">Librería Online</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,34 +26,27 @@
     </nav>
 
     <div class="container mt-5">
-        <h1>Listado de Libros Disponibles</h1>
+        <h1>Listado de Autores</h1>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Título</th>
-                    <th>Tipo</th>
-                    <th>Precio</th>
-                    <th>Notas</th>
-                    <th>Autores</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Ciudad</th>
+                    <th>País</th>
+                    <th>Teléfono</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $stmt = $pdo->query("
-                    SELECT t.id_titulo, t.titulo, t.tipo, t.precio, t.notas,
-                           GROUP_CONCAT(CONCAT(a.nombre, ' ', a.apellido) SEPARATOR ', ') AS autores
-                    FROM titulos t
-                    LEFT JOIN titulo_autor ta ON t.id_titulo = ta.id_titulo
-                    LEFT JOIN autores a ON ta.id_autor = a.id_autor
-                    GROUP BY t.id_titulo
-                ");
+                $stmt = $pdo->query("SELECT nombre, apellido, ciudad, pais, telefono FROM autores");
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>
-                        <td>{$row['titulo']}</td>
-                        <td>{$row['tipo']}</td>
-                        <td>\${$row['precio']}</td>
-                        <td>{$row['notas']}</td>
-                        <td>{$row['autores']}</td>
+                        <td>{$row['nombre']}</td>
+                        <td>{$row['apellido']}</td>
+                        <td>{$row['ciudad']}</td>
+                        <td>{$row['pais']}</td>
+                        <td>{$row['telefono']}</td>
                     </tr>";
                 }
                 ?>
