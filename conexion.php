@@ -1,8 +1,8 @@
 <?php
-$host = 'sql3.freesqldatabase.com';
-$dbname = 'sql3809710';
-$user = 'sql3809710';
-$pass = 'WLgQPYVFYJ'; 
+$host = 'sql201.infinityfree.com';
+$dbname = 'if0_40540072_dblibreria';
+$user = 'if0_40540072';
+$pass = 'JinGa213'; 
 $port = 3306;
 
 try {
